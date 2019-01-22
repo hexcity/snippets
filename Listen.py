@@ -13,7 +13,7 @@ s.bind( (host, port) )
 s.listen()
 conn, addr = s.accept()
 
-print( "Connected by: ", addr )
+print( "Connected by addr: ", addr )
 
 while True:
     data = conn.recv()
