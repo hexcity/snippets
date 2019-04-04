@@ -5,7 +5,7 @@
 @description: Across the screen
 '''
 
-import time
+from time import sleep
 
 str = "Peter Was Here"
 columns = 79
