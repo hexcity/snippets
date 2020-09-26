@@ -6,6 +6,7 @@
 '''
 
 from time import sleep
+import time
 
 str = "Peter Was Here"
 columns = 79
