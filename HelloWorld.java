@@ -9,7 +9,7 @@ public class HelloWorld {
 
         char a = 'a';
         char b = 'b';
-        char c = 'c';
+        // char c = 'c';
 
         System.out.println("First" + a + b);
 
