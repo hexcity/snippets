@@ -9,15 +9,16 @@ public class HelloWorld {
 
         char a = 'a';
         char b = 'b';
-        // char c = 'c';
+        char c = 'c';
 
-        System.out.println("First" + a + b);
+        System.out.println("First" + a + b + c);
 
-        char n[] = new char[4];
+        char[] n = new char[4];
 
         n[0] = 'y';
         n[1] = 'z';
 
         System.out.println("First" + Arrays.toString(n));
     }
+
 }
