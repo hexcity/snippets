@@ -7,7 +7,7 @@ import socket
 
 MyIP = ipaddress.ip_address('172.21.96.10')
 dName = "www.intel.com"
-dIP = "10.220.3.11"
+dIP = "10.220.13.167"
 
 resName = socket.gethostbyname_ex(dName)
 try:
