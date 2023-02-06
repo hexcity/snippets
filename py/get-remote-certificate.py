@@ -35,7 +35,8 @@ def fetch_server_certificate (host, port):
                 status, output = subproc(r'openssl x509 -in "%s" -out "%s"' %
                                          (tn, tn2))
                 if status != 0:
-                    raise OperationError(status, tsig, output)
+#                    raise OperationError(status, tsig, output)
+                    sys.stdout.write("Status not zero: %s" % status)
                 fp = open(tn2, 'rb')
                 data = fp.read()
                 fp.close()
@@ -60,6 +61,8 @@ def fetch_server_certificate (host, port):
             'openssl s_client -connect "%s:%s" -showcerts < /dev/null' %
             (host, port))
     if status != 0:
+        sys.stderr.write( "Status not zero: %s\n" %
+            status)
         raise OSError(status)
     certtext = strip_to_x509_cert(output)
     if not certtext:
@@ -68,12 +71,15 @@ def fetch_server_certificate (host, port):
     return certtext
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        sys.stderr.write(
-            "Usage:  %s HOSTNAME:PORTNUMBER [, HOSTNAME:PORTNUMBER...]\n" %
-            sys.argv[0])
-        sys.exit(1)
-    for arg in sys.argv[1:]:
-        host, port = arg.split(":")
-        sys.stdout.write(fetch_server_certificate(host, int(port)))
+#    if len(sys.argv) < 2:
+#        sys.stderr.write(
+#            "Usage:  %s HOSTNAME:PORTNUMBER [, HOSTNAME:PORTNUMBER...]\n" %
+#            sys.argv[0])
+#        sys.exit(1)
+#    for arg in sys.argv[1:]:
+#        host, port = arg.split(":")
+#        sys.stdout.write(fetch_server_certificate(host, int(port)))
+    host = "192.168.88.4"
+    port = 8989
+    sys.stdout.write(fetch_server_certificate(host, int(port)))
     sys.exit(0)
