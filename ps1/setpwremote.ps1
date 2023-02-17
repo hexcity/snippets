@@ -1,3 +1,6 @@
+<#
+    Original code dos not work on a non-domain joined member system
+#>
 function Set-PasswordRemotely {
     [CmdletBinding()]
     param(
