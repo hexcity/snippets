@@ -16,7 +16,7 @@ $port = 636; // LDAPS Port for Development Environment
  
 //$dn = 'CN=test@awrootbeer.com,OU=Users,OU=A%26W%20Rootbeer,OU=MSSP,DC=aliant,DC=net';
 $dn = 'CN=phpldapadmin,OU=SMG,DC=aliant,DC=net';
-$password = 'ldapadmin1';
+$password = 'xxxxxxx';
  
 echo "Connecting to $host on port $port...\n";
 $connection = ldap_connect($host, $port);

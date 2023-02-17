@@ -61,7 +61,7 @@ function remoteDoAuth($username, $password) {
 	$conf['db_host']    = "localhost";
 	$conf['db_base']    = "kb";
 	$conf['db_user']    = "kbuser";
-	$conf['db_pass']    = "smg499kbuser";
+	$conf['db_pass']    = "xxxx";
 	$conf['db_driver']  = "mysql";
 	
 	$db = &DBUtil::connect($conf);
