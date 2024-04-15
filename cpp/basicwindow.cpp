@@ -1,6 +1,7 @@
 #ifndef UNICODE
 #define UNICODE
 #endif 
+// Build with g++ needs the -municode option.
 
 #include <windows.h>
 
